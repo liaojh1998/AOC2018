@@ -1,0 +1,48 @@
+version: 2
+jobs:
+    build:
+        docker:
+            - image: circleci/python:3.5-jessie-node-browsers-legacy
+        steps:
+            - checkout
+            - run: echo "Test test"
+            - run:
+                name: Test 2.0
+                command: ls
+                working_directory: day1
+            - run:
+                name: test python
+                command: |
+                    python3 -c 'print("hi")'
+
+    test:
+        docker:
+            - image: circleci/python:3.5-jessie-node-browsers-legacy
+        steps:
+            - checkout
+            - run:
+                name: test python unittest
+                command: |
+                    python3 -m unittest discover
+
+    deploy:
+        docker:
+            - image: circleci/python:3.5-jessie-node-browsers-legacy
+        steps:
+            - checkout
+
+workflows:
+    version: 2
+    build_and_test:
+        jobs:
+            - build
+            - test:
+                requires:
+                    - build
+            - deploy:
+                requires:
+                    - build
+                    - test
+                filters:
+                    branches:
+                        only: master
