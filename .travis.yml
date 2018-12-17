@@ -1,0 +1,4 @@
+matrix:
+    include:
+        - language: java
+          jdk: oraclejdk8
