@@ -1,4 +1,4 @@
-package day1.part1;
+package day1.part2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,14 +7,21 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ChronalCalibration {
 
     public static int sum(int[] arr) {
-        int ans = 0;
-        for (int i = 0; i < arr.length; i++)
-            ans += arr[i];
-        return ans;
+        HashSet<Integer> set = new HashSet<Integer>();
+	set.add(0);
+	int cur = 0;
+        for (int i = 0; i < arr.length; i = (i + 1) % arr.length) {
+            cur += arr[i];
+            if (set.contains(cur))
+		return cur;
+	    set.add(cur);
+	}
+	return -1; // Only reaches here if length == 0
     }
 
     public static void main(String[] args) throws IOException {
@@ -39,7 +46,7 @@ public class ChronalCalibration {
             for (int i = 0; i < buffer.size(); i++)
                 arr[i] = buffer.get(i);
 
-            // Write the summation of frequency changes.
+            // Write the first re-encountered summation of frequency changes.
             if (args.length == 2) {
                 BufferedWriter fout = new BufferedWriter(new FileWriter(new File(args[1])));
                 try {
