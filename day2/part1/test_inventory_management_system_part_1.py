@@ -1,5 +1,5 @@
 import unittest
-from inventory_management_system import checksum
+from inventory_management_system_part_1 import checksum
 
 class TestInventoryManagementSystem(unittest.TestCase):
     
