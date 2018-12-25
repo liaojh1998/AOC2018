@@ -3,7 +3,11 @@ all: build test task clean
 build:
 	@echo "Compiling for day 3 part 1."
 	@mkdir build
-	@g++ -std=c++14 -Wl,--stack,0x400000 -o build/slice slice.cpp
+ifeq ($(shell uname), Linux)
+	$(CXX) -std=c++14 -o build/slice slice.cpp
+else
+	g++ -std=c++14 -Wl,--stack,0x400000 -o build/slice slice.cpp
+endif
 	@echo "Success!"
 
 test:
