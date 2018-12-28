@@ -8,7 +8,7 @@ import (
 	"os"
 	"unicode"
 
-	"github.com/liaojh1998/AOC2018/day5/part1/stack"
+	"github.com/liaojh1998/AOC2018/day5/stack"
 )
 
 func check(e error) {
