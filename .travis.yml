@@ -22,5 +22,10 @@ matrix:
           d: "dmd"
           script: make day4
 
+        - language: go
+          go: "1.10.x"
+          install: go get ./...
+          script: go test -v ./...
+
 before_install:
     - eval "${MATRIX_EVAL}"
