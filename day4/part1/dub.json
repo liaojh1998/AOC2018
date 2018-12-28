@@ -1,0 +1,9 @@
+{
+	"description": "Find which guard sleeps the most so that the Elves can sneak in!",
+	"license": "proprietary",
+	"authors": [
+		"Jie Hao Liao"
+	],
+	"copyright": "Copyright © 2018, Jie Hao Liao",
+	"name": "repose_record"
+}
