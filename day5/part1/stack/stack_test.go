@@ -47,6 +47,10 @@ func TestStackGeneral(t *testing.T) {
 	s.Push(0)
 	s.Push(1)
 	s.Push(2)
+
+	if size := s.Size(); size != 3 {
+		t.Errorf("Stack Size() did not return 3, but %d as size.\n", size)
+	}
 	if e := s.Top(); e != 2 {
 		t.Errorf("Stack Top() did not return 2, but %d as top element.\n", e)
 	}
