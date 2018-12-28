@@ -25,7 +25,6 @@ int
 main(int argc, char *argv[])
 {
     if (argc < 2 || argc > 3) {
-	cout << "Missing <input file>" << endl;
         cout << "usage: <input file> <optional output file>" << endl;
 	return 1;
     }

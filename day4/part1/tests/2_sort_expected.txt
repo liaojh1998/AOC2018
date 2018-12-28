@@ -1,0 +1,5 @@
+[2012-01-12 00:00] Guard #1238 begins shift
+[2012-01-12 23:59] Guard #234 begins shift
+[2012-01-14 00:02] Guard #18 begins shift
+[2012-01-15 00:05] Guard #101 begins shift
+[2012-01-15 23:40] Guard #2342 begins shift
