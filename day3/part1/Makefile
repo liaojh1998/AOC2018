@@ -1,7 +1,6 @@
 all: build test task clean
 
 build:
-	@echo "Compiling for day 3 part 1."
 	@mkdir build
 ifeq ($(shell uname), Linux)
 	$(CXX) -std=c++14 -o build/slice slice.cpp

@@ -1,0 +1,9 @@
+[2012-02-11 00:20] falls asleep
+[2012-01-12 23:59] Guard #234 begins shift
+[2012-02-11 00:42] wakes up
+[2012-01-12 00:00] Guard #1238 begins shift
+[2012-01-12 00:35] wakes up
+[2012-01-13 00:31] wakes up
+[2012-01-12 00:15] falls asleep
+[2012-02-11 00:02] Guard #18 begins shift
+[2012-01-13 00:10] falls asleep
