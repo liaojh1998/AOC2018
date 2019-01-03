@@ -1,4 +1,4 @@
-require File.expand_path("../coord.rb", __FILE__)
+require File.expand_path("../expand.rb", __FILE__)
 
 ######## Main ########
 if ARGV.length < 1 or ARGV.length > 2

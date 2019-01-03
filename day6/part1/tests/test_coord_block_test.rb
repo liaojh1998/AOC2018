@@ -1,4 +1,4 @@
-require File.expand_path("../../coord.rb", __FILE__)
+require File.expand_path("../../expand.rb", __FILE__)
 require "minitest/autorun"
 
 class TestBlockTest < Minitest::Test

@@ -9,7 +9,7 @@ Rake::TestTask.new :test do |t|
 end
 
 task :run do
-  ruby "main.rb input.txt output.txt"
+  ruby "main.rb 10000 input.txt output.txt"
   sh "cat output.txt"
   printf "\n"
 end
