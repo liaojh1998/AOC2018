@@ -1,15 +1,9 @@
 require "rake/testtask"
 
-task default: %w[test run]
+task default: %w[test]
 
 Rake::TestTask.new :test do |t|
   t.libs << "tests"
   t.test_files = FileList['tests/test*.rb']
   t.verbose = true
-end
-
-task :run do
-  ruby "main.rb input.txt output.txt"
-  sh "cat output.txt"
-  printf "\n"
 end
