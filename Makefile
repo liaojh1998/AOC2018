@@ -1,4 +1,14 @@
-all: day3 day4
+all: day1 day3 day4
+
+day1: day1part1 day1part2
+
+day1part1:
+	@echo "---- Day 1 Part 1 ----"
+	@cd day1/part1/ && make all
+
+day1part2:
+	@echo "---- Day 1 Part 2 ----"
+	@cd day1/part2/ && make all
 
 day3: day3part1 day3part2
 
@@ -21,6 +31,9 @@ day4part2:
 	@cd day4/part2/ && make all
 
 clean:
+	@cd day1/part1/ && make $@
+	@cd day1/part2/ && make $@
 	@cd day3/part1/ && make $@
 	@cd day3/part2/ && make $@
 	@cd day4/part1/ && make $@
+	@cd day4/part2/ && make $@

@@ -19,7 +19,7 @@ func check(e error) {
 
 func main() {
 	if len(os.Args) < 2 || len(os.Args) > 3 {
-		check(errors.New("usage: <input file> <optional output file>"))
+		check(errors.New("usage: go run main.go <input file> <optional output file>"))
 	}
 
 	f, err := os.Open(os.Args[1])

@@ -19,7 +19,7 @@ unittest
 int main(string[] args)
 {
     if (args.length < 2 || args.length > 3) {
-        writeln("usage: <input file> <optional output file>");
+        writeln("usage: repose_record <input file> <optional output file>");
         return 1;
     }
 
