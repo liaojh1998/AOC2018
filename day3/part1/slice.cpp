@@ -23,7 +23,7 @@ int
 main(int argc, char *argv[])
 {
     if (argc < 2 || argc > 3) {
-        cout << "usage: <input file> <optional output file>" << endl;
+        cout << "usage: slice <input file> <optional output file>" << endl;
 	return 1;
     }
     ifstream fin;

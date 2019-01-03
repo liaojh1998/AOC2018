@@ -26,7 +26,7 @@ public class ChronalCalibration {
 
     public static void main(String[] args) throws IOException {
         if (args.length < 1)
-            throw new IOException("Need to specify an input file path.");
+            throw new IOException("usage: java day1.part2.ChronalCalibration <input file> <optional output file>");
 
         // Read frequency changes and convert them to integers.
         BufferedReader fin = new BufferedReader(new FileReader(new File(args[0])));

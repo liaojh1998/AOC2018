@@ -27,5 +27,9 @@ matrix:
           install: go get -v ./...
           script: go test -v ./...
 
+        - language: ruby
+          script: |
+            cd day6/part1 && rake
+
 before_install:
     - eval "${MATRIX_EVAL}"
