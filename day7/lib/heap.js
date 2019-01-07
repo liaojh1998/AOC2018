@@ -49,6 +49,14 @@ class Heap {
 		}
 	}
 
+	// Constant peek of least element
+	peek() {
+		if (this.size() == 0)
+			throw new Error("no elements are in the heap");
+
+		return this._array[0];
+	}
+
 	// Logarithmic deletion by sifting down last element
 	shift() {
 		if (this.size() == 0)
