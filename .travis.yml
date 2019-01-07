@@ -2,9 +2,12 @@ matrix:
     include:
         - language: java
           jdk: oraclejdk8
+          before_install: cd day1
+          script: mvn test
 
         - language: python
           python: "3.6"
+          before_install: cd day2
           script: pytest
 
         - language: cpp
@@ -16,20 +19,30 @@ matrix:
                 - g++-7
           env:
             - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
-          script: make day3
+          before_install: |
+            cd day3
+            eval "${MATRIX_EVAL}"
+          script: make
 
         - language: d
           d: "dmd"
-          script: make day4
+          before_install: cd day4
+          script: make
 
         - language: go
           go: "1.10.x"
+          before_install: cd day5
           install: go get -v ./...
           script: go test -v ./...
 
         - language: ruby
           rvm: "2.6.0"
-          script: make day6
+          before_install: cd day6
+          script: make
 
-before_install:
-    - eval "${MATRIX_EVAL}"
+        - language: node_js
+          node_js: "10"
+          before_install: |
+            cd day7
+            npm ci
+          script: npm test

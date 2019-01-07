@@ -1,4 +1,4 @@
-all: build test task clean
+all: build test run
 
 build:
 	@mkdir build
@@ -36,7 +36,7 @@ test:
 	@echo "Passed."
 	@rm -rf tests/*_actual.txt
 
-task:
+run:
 	@echo "Solving for Day 3 Part 2..."
 	build/slice input.txt output.txt
 	@echo "Done."
