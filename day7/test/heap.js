@@ -36,7 +36,7 @@ describe('Heap', function() {
 	});
 
 	describe('#push()', function() {
-		it('should successfully insert a new element from empty state', () => {
+		it('should successfully insert a new element from empty state', function() {
 			testHeap = new heap.Heap();
 			testHeap.push(0);
 			assert.equal(testHeap._array[0], 0, 'Heap should successfully insert 0.');
@@ -46,7 +46,7 @@ describe('Heap', function() {
 			assert.equal(testHeap._array[2], 34578, 'Heap should successfully insert 34578.');
 		}); 
 
-		it('should successfully insert and sift up lesser elements', () => {
+		it('should successfully insert and sift up lesser elements', function() {
 			testHeap = new heap.Heap();
 			testHeap.push(234);
 			assert.deepEqual(testHeap._array, [234], 'Heap should correctly insert 1st element.');
@@ -66,7 +66,7 @@ describe('Heap', function() {
 			assert.deepEqual(testHeap._array, [40, 70, 57, 100, 100, 150, 70, 234], 'Heap should correctly insert 8th element.');
 		});
 
-		it('should successfully use customized less_than to insert and sift up lesser elements', () => {
+		it('should successfully use customized less_than to insert and sift up lesser elements', function() {
 			testHeap = new heap.Heap((a, b) => a > b);
 			testHeap.push(234);
 			assert.deepEqual(testHeap._array, [234], 'Heap should correctly insert 1st element.');
@@ -94,7 +94,7 @@ describe('Heap', function() {
 	});
 
 	describe('#shift()', function() {
-		it('should successfully delete elements', () => {
+		it('should successfully delete elements', function() {
 			testHeap = new heap.Heap();
 			testHeap.push(0);
 			testHeap.push(1);
@@ -108,7 +108,7 @@ describe('Heap', function() {
 			assert.deepEqual(testHeap._array, [], 'Heap should correctly organize array after removing 3rd element.');
 		}); 
 
-		it('should successfully delete and sift down greater elements', () => {
+		it('should successfully delete and sift down greater elements', function() {
 			testHeap = new heap.Heap();
 			testHeap.push(234);
 			testHeap.push(100);
@@ -137,7 +137,7 @@ describe('Heap', function() {
 			assert.deepEqual(testHeap._array, [], 'Heap should correctly organize array after removing 8th element.');
 		});
 
-		it('should successfully use customized less_than to delete and sift down greater elements', () => {
+		it('should successfully use customized less_than to delete and sift down greater elements', function() {
 			testHeap = new heap.Heap((a, b) => a > b);
 			testHeap.push(234);
 			testHeap.push(100);
@@ -186,6 +186,65 @@ describe('Heap', function() {
 			testHeap2.push(0);
 			testHeap2.shift();
 			assert.throws(() => { testHeap2.shift() }, {
+				name: 'Error',
+				message: 'no elements are in the heap'
+			});
+		});
+	});
+
+	describe('#peek()', function() {
+		it('should successfully see the least element', function() {
+			testHeap = new heap.Heap();
+			testHeap.push(0);
+			testHeap.push(1);
+			testHeap.push(34578);
+			assert.equal(testHeap.peek(), 0, 'Heap should return the least element on ascending insert of elements.');
+
+			testHeap2 = new heap.Heap();
+			testHeap2.push(45345);
+			testHeap2.push(3457);
+			testHeap2.push(0);
+			assert.equal(testHeap2.peek(), 0, 'Heap should return the least element on descending insert of elements.');
+
+			testHeap3 = new heap.Heap();
+			testHeap3.push(234);
+			testHeap3.push(100);
+			testHeap3.push(150);
+			testHeap3.push(57);
+			testHeap3.push(70);
+			testHeap3.push(70);
+			testHeap3.push(40);
+			testHeap3.push(100);
+			assert.equal(testHeap3.peek(), 40, 'Heap should return the least element on general insertion of elements.');
+		});
+
+		it('should successfully see the least element when using customized less_than', function() {
+			testHeap = new heap.Heap((a, b) => a > b);
+			testHeap.push(234);
+			testHeap.push(100);
+			testHeap.push(150);
+			testHeap.push(57);
+			testHeap.push(70);
+			testHeap.push(70);
+			testHeap.push(40);
+			testHeap.push(100);
+			testHeap.push(400);
+			testHeap.push(320);
+			testHeap.push(300);
+			assert.equal(testHeap.peek(), 400, 'Heap should return the least element on general insertion of elements.');
+		});
+
+		it('should throw error when trying to see least element from an empty heap', function() {
+			testHeap = new heap.Heap();
+			assert.throws(() => { testHeap.peek() }, {
+				name: 'Error',
+				message: 'no elements are in the heap'
+			});
+
+			testHeap2 = new heap.Heap();
+			testHeap2.push(0);
+			testHeap2.shift();
+			assert.throws(() => { testHeap2.peek() }, {
 				name: 'Error',
 				message: 'no elements are in the heap'
 			});
