@@ -1,0 +1,21 @@
+{
+  "name": "sum_of_its_parts",
+  "version": "1.0.0",
+  "description": "Solution to Day 7 of Advent of Code 2018.",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liaojh1998/AOC2018.git"
+  },
+  "author": "Jie Hao Liao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liaojh1998/AOC2018/issues"
+  },
+  "homepage": "https://github.com/liaojh1998/AOC2018#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}

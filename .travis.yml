@@ -31,5 +31,12 @@ matrix:
           rvm: "2.6.0"
           script: make day6
 
+        - language: node_js
+          node_js: "10"
+          before_install: |
+            cd day7
+            npm ci
+          script: npm test
+
 before_install:
     - eval "${MATRIX_EVAL}"
