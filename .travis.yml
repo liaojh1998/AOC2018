@@ -46,3 +46,8 @@ matrix:
             cd day7
             npm ci
           script: npm test
+
+        - language: scala
+          scala: "2.12.7"
+          before_install: cd day8
+          script: sbt ++$TRAVIS_SCALA_VERSION test
