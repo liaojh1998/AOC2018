@@ -7,3 +7,15 @@ lazy val root = (project in file("."))
     name := "day8",
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % Test
   )
+lazy val part1 = (project in file("part1"))
+  .settings(
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % Test
+  )
+  .aggregate(root)
+  .dependsOn(root)
+lazy val part2 = (project in file("part2"))
+  .settings(
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % Test
+  )
+  .aggregate(root)
+  .dependsOn(root)
