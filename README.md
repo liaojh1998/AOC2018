@@ -10,6 +10,7 @@ Day 4 - D
 Day 5 - Go  
 Day 6 - Ruby  
 Day 7 - Node.js  
+Day 8 - Scala  
 
 ## Plan
-Day 8 - Scala
+Day 9 - C#
