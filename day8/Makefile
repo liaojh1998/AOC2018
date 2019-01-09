@@ -14,4 +14,5 @@ run:
 	sbt "project part2" "run input.txt output/part2.txt"
 
 clean:
+	rm -rf ./target
 	rm -rf **/target

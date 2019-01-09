@@ -50,4 +50,4 @@ matrix:
         - language: scala
           scala: "2.12.7"
           before_install: cd day8
-          script: make test
+          script: make
