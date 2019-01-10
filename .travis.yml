@@ -51,3 +51,9 @@ matrix:
           scala: "2.12.7"
           before_install: cd day8
           script: make
+
+        - language: csharp
+          mono: none
+          dotnet: 2.1.502
+          before_install: cd day9
+          script: make
