@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\day9\part1.csproj" />
+    <ProjectReference Include="..\part1\part1.csproj" />
+    <ProjectReference Include="..\part2\part2.csproj" />
   </ItemGroup>
 
 </Project>
