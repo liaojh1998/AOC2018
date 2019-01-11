@@ -11,6 +11,7 @@ Day 5 - Go
 Day 6 - Ruby  
 Day 7 - Node.js  
 Day 8 - Scala  
+Day 9 - C#
 
 ## Plan
-Day 9 - C#
+Day 10 - Rust
