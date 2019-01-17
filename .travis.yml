@@ -57,3 +57,8 @@ matrix:
           dotnet: 2.1.502
           before_install: cd day9
           script: make
+
+        - language: rust
+          rust: "1.31.0"
+          before_install: cd day10
+          script: make
