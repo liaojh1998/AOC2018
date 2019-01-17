@@ -11,7 +11,10 @@ Day 5 - Go
 Day 6 - Ruby  
 Day 7 - Node.js  
 Day 8 - Scala  
-Day 9 - C#
+Day 9 - C#  
+Day 10 - Rust
 
 ## Plan
-Day 10 - Rust
+None as of right now.  
+Will be starting college again soon.  
+Currently working on building personal website.
