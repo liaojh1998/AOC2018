@@ -1,0 +1,10 @@
+*.class
+__pycache__
+*.stackdump
+*.swp
+*/node_modules
+**/target
+**/Debug
+**/Release
+**/.vs
+**/*.lock
